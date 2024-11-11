@@ -3,6 +3,7 @@ public class Inventory {
     private String[] items;
     private int itemCount;
 
+
     public Inventory() {
         items = new String[MAX_ITEMS];
         itemCount = 0;
