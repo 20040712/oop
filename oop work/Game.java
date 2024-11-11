@@ -27,7 +27,7 @@ public class Game {
         boolean gameRunning = true;
 
         while (gameRunning) {
-            // 保留这行代码打印当前位置
+            
             System.out.println("Current position: " + playerPosition.getX() + ", " + playerPosition.getY());
 
             System.out.println("Input command（For example: look, move north, search 101）：");
@@ -66,6 +66,11 @@ public class Game {
                     score.visitRoom(); 
                     System.out.println("You found a security key and a key to room 103!");
                     break;
+                case "search 103":
+                    inventory.addItem("a key to room 201");
+                    score.visitRoom();
+                    System.out.println("You found a key to room 201");
+                    break;
                 case "search 201":
                     if (room201.hasGuard()) {
                         System.out.println("Suddenly, the guard appeared and drew his gun and fired!!");
@@ -90,6 +95,34 @@ public class Game {
                 
                 case "inventory":
                     System.out.println("Your things: " + inventory.displayInventory());
+                    break;
+                case "search 202":
+                    inventory.addItem("the security key");
+                    inventory.addItem("a key to room 203");
+                    score.visitRoom(); 
+                    System.out.println("You found a security key and a key to room 203!");
+                    break;
+                case "search 203":
+                    inventory.addItem("a key to room 301");
+                    score.visitRoom();
+                    System.out.println("You found a key to room 301");
+                    break;
+                case "search 301":
+                    inventory.addItem("the security key");
+                    inventory.addItem("a key to room 302");
+                    score.visitRoom(); 
+                    System.out.println("You found a security key and a key to room 302!");
+                    break;
+                case "search 302":
+                    inventory.addItem("a key to room 303");
+                    score.visitRoom();
+                    System.out.println("You found a key to room 303");
+                    break;
+                case "search 303":
+                    inventory.addItem("the security key");
+                    inventory.addItem("a key to room 401");
+                    score.visitRoom(); 
+                    System.out.println("You found the last security key and a key to room 401!");
                     break;
                 case "search 401":
                     if (score.canDestroyNuclearButton()) {
