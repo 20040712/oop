@@ -67,7 +67,9 @@ public class Game {
                     if (room201.hasGuard()) {
                         System.out.println("Suddenly, the guard appeared and drew his gun and fired!!");
                         System.out.println("You must react!input 'fight' to fight,or input 'run' to run:");
-                        String response = scanner.nextLine().toLowerCase();
+                        String response = scanner.nextLine().toLowerCase();  
+                        
+
                         if (response.equals("fight")) {
                             System.out.println("You managed to defeat the guard!");
                             guardDefeated = true;
